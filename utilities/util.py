@@ -259,9 +259,10 @@ def prep_image(img, inp_dim):
         255.0).unsqueeze(0)  # convert to torch and normalise
     return img
 
+
 def setController(buzz, pos, ser):
     """
-    Sets servo angle and buzzer state on serial port ser
+    Sets servo angle to pos and buzzer state to buzz on serial port ser
     """
     s = "{0:03d}{1}".format(int(pos), buzz) # Add trailing zeros to make 3 digit number
     print(s)
