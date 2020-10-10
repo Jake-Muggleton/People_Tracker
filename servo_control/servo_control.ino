@@ -22,8 +22,9 @@ void loop() {
   inByte3 = "";
   inByte4 = "";
 
-  if(Serial.available()==4){ // only read data if data has been sent
-    // data is 4 bytes: pos1, pos2, pos3, buzzerstate
+  if(Serial.available()==4){ // only read data if 4 bytes of data has been sent
+      
+    // incoming data is 4 bytes: pos1, pos2, pos3, buzzerstate
     inByte1 = Serial.read(); // read the incoming data
     inByte2 = Serial.read(); // read the incoming data
     inByte3 = Serial.read(); // read the incoming data
