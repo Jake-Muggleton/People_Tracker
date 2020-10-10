@@ -9,7 +9,7 @@ import pickle as pkl
 import datetime as dt
 import serial
  
-#global variables and constants
+#global variables and parameters
 VISIBLE_CLASSES = ["person"] # makes the classes in list the only ones visible at output, leave empty to do nothing
 AREA_THRESH = 0.35 #a bbox that takes up this ratio of the detection image relates to a 1.5m distance, may need to calibrate
 CAMANGLE = 63 #the FOV angle of the camera
@@ -110,7 +110,10 @@ dist_img = cv2.imread("imgs/DistDet.jpg")
 dist_img = cv2.resize(dist_img, (1200, 800))
 
 
-def draw(x, frame):          # draws bboxes and other perdiction info onto a frame
+def draw(x, frame): 
+    """
+     Draws bboxes and other perdiction info onto a frame
+    """
     cls = int(x[-1])
 
     if not VISIBLE_CLASSES or classes[cls] in  VISIBLE_CLASSES: #if VISIBLE_CLASSES is empty or cls is visible
@@ -137,6 +140,10 @@ def draw(x, frame):          # draws bboxes and other perdiction info onto a fra
 
 
 def send(x, fdim):   
+    """
+    Checks the proximity / location of a person in the prediction x and sends the information to the microcontoller
+    """
+ 
     global det_status
     cls = int(x[-1])
     
