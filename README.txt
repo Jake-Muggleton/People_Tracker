@@ -1,4 +1,6 @@
-This project was a result of a research bursary program in late 2019 where I studied CNNs (Computational Neural Networks) for efficient computer vision people detection. Following on from this project, I added a method of approximating a person's distance from the camera using the 2D images from a single video source. I also added a microcontroller that is driven by the detector and points to any person in the FOV of the camera, making a noise if that person gets too close. 
+This project was a result of a research bursary program in late 2019 where I studied CNNs (Computational Neural Networks) for efficient computer vision people detection.
+Following on from this project, I added a method of approximating a person's distance from the camera using the 2D images from a single video source. I also added a
+microcontroller that is driven by the detector and points to any person in the FOV of the camera, making a noise if that person gets too close. 
 
 
 Demo Video:
